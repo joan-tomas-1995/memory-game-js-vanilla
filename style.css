@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@1,200;1,500&family=Roboto:wght@100;300;400&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  flex-direction: column;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  background-color: #222;
+  color: white;
+  /*   box-shadow: rgb(204, 255, 0) 3px 3px 5px;
+ */
+}
+
+.titulo {
+  font-size: 45px;
+  text-align: center;
+  padding: 10px 40px;
+  margin: 30px;
+  background-color: white;
+  color: #222;
+  border-radius: 10px;
+  box-shadow: rgb(204, 255, 0) 3px 3px 5px;
+  transition: all 0.1s ease-in-out;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  grid-auto-flow: row;
+  margin: 10px;
+  transition: all 0.1s ease-in-out;
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  width: clamp(65px, 12vw, 160px);
+  height: clamp(65px, 12vw, 160px);
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: rgb(204, 255, 0) 3px 3px 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.table:hover {
+  box-shadow: rgb(238, 255, 0) 0 0 25px 5px;
+}
+
+.monstrada {
+  display: block !important;
+  background-color: rgb(56, 218, 56) !important;
+  transition: all 0.5s ease-in-out;
+}
+
+.carta-erronea {
+  background-color: rgb(255, 76, 60);
+}
+
+.girar {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.movimientos {
+  text-align: center;
+  padding: 5px;
+  transition: all 0.6s ease-in-out;
+}
+
+.tiempo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: #222;
+  border-radius: 10px;
+  box-shadow: rgb(204, 255, 0) 3px 3px 5px;
+  margin: 15px;
+  padding: 5px;
+}
+
+#tamaño {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: #222;
+  border-radius: 10px;
+  box-shadow: rgb(204, 255, 0) 3px 3px 5px;
+  margin: 15px;
+  padding: 5px;
+}
+
+#tamaño>select {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: #222;
+  border-radius: 10px;
+  box-shadow: rgb(204, 255, 0) 3px 3px 5px;
+}
+
+.container-movimientos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease-in-out;
+}
+
+.reset {
+  border-radius: 10px;
+  padding: 5px;
+  margin: 25px;
+  cursor: pointer;
+  box-shadow: rgb(204, 255, 0) 3px 3px 5px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.reset:hover {
+  box-shadow: rgb(238, 255, 0) 0 0 15px 2px;
+}
+
+/* CONTAINER FINAL DE PARTIDA */
+
+.container-final-juego {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 220px;
+  height: clamp(180px, 20vw, 190px);
+  background-color: rgb(230, 226, 226);
+  position: absolute;
+  z-index: 2;
+  top: 420px;
+  border-radius: 10px;
+  box-shadow: rgb(204, 255, 0) 3px 3px 5px;
+  padding: 5px;
+  margin: 25px;
+  padding-top: 50px;
+  visibility: hidden;
+}
+
+.btn-fin {
+  text-align: center;
+  box-shadow: rgb(164, 163, 163) 3px 3px 5px;
+}
+
+.has-ganado {
+  color: black;
+  text-align: center;
+}
+
+.cerrar {
+  position: absolute;
+  left: 180px;
+  top: 10px;
+  color: black;
+  cursor: pointer;
+  background-color: rgb(188, 184, 184);
+  box-shadow: rgb(44, 44, 44) 1px 1px 3px;
+  padding: 0 7px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+#min {
+  margin-left: 10px;
+}
+
+.link-git {
+  width: 2.5%;
+}
+
+/*  MEDIA QUERIES */
+
+@media only screen and (max-width: 500px) {
+  .container-movimientos {
+    font-size: 16px;
+  }
+
+  .titulo {
+    font-size: 25px;
+  }
+
+  .container-movimientos {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .container {
+    gap: 15px;
+  }
+}

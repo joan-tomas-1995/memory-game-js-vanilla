@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/Imagenes/memory game fav.webp">
+
+  </head>
+
+  <body>
+    <div class="container-final-juego">
+      <span class="cerrar">X</span>
+      <p class="has-ganado">HAS GANADO!</p>
+      <button class="reset btn-fin">Reset</button>
+    </div>
+    <h1 class="titulo">MEMORY GAME</h1>
+    <div class="container"></div>
+    <div class="container-movimientos">
+      <p id="tamaño">
+        Tamaño:
+        <select id="select-tamaño" name="tamaño">
+          <option id="tablero12" value="12">3x4</option>
+          <option id="tablero16" value="16">4x4</option>
+          <option id="tablero20" value="20">4x5</option>
+        </select>
+      </p>
+      <p id="reloj" class="tiempo">
+        Tiempo:<span id="min"> 0:</span><span id="seg">00</span>
+      </p>
+      <div class="container-footer">
+        <p>Movimientos:</p>
+        <p class="movimientos"></p>
+      </div>
+      <button class="reset">Reset</button>
+      <a class="link-git" href="https://github.com/joan-tomas-1995" target="_blank"> <img class="git-hub-icon" src="/github-mark-white.png" alt=""></a>
+    </div>
+    <script src="app.js"></script>
+  </body>
+
+</html>
